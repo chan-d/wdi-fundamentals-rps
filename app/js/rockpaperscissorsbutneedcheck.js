@@ -56,15 +56,15 @@ function getWinner(playerMove, computerMove) {
         } else {winner = "computer"}
     } return winner; 
 }
-var playerWins = 0;
-var computerWins = 0;
+
 function playToFive() {
     console.log("Let's play Rock, Paper, Scissors");
-   
-    while ((playerWins < 5) || (computerWins < 5)) {
-    playerMove = getPlayerMove(getInput());
-    computerMove = getComputerMove(randomPlay());
-    winner =  getWinner(getPlayerMove,getComputerMove);
+     var playerWins = 0;
+     var computerWins = 0;
+    while ((playerWins < 5) && (computerWins < 5)) {
+    var playerMove = getPlayerMove();
+    var computerMove = getComputerMove();
+    var winner =  getWinner(PlayerMove,ComputerMove);
     
         if (winner=== "player") {
             playerWins++;
